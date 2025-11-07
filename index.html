@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <title>weekly Bristol Icarian jam sign-up</title>
+    <?!= include("style"); ?>
+  </head>
+  <body>
+    <header>
+      <img src="https://d2jxahguxoqrsw.cloudfront.net/media/images/mini-865A9332.webp" alt="Icarian">
+      <h1>Bristol Monday Icarian Jam</h1>
+      <h3>Weekly Sign up Sheet</h3>
+      <p>Enter your name below to sign up for this week’s event. There are <b>12 spots</b> available. Additional signups will be placed on the waitlist automatically.</p>
+      <p>In the case that you cannot make the jam but have signed your name up, please remove your name by Sunday night and notify the whatsapp group so another can take the space.</p>
+    </header>
+
+    <form id="signupForm">
+      <input type="text" id="name" placeholder="Your name" required>
+      <input type="text" id="pronouns" placeholder="Pronouns (optional)">
+      <button type="submit">Sign Up</button>
+    </form>
+
+    <div class="tables">
+      <h2>Current Signups</h2>
+      <div class="table-container">
+        <table id="mainTable"></table>
+      </div>
+
+      <h2>Waitlist</h2>
+      <div class="table-container">
+        <table id="waitlistTable"></table>
+      </div>
+    </div>
+
+    <form id="removeForm">
+      <input type="text" id="removeName" placeholder="Name to remove">
+      <button type="submit" class="danger">Remove Me</button>
+    </form>
+
+    <form id="editPronounsForm">
+      <input type="text" id="editName" placeholder="Your name" required>
+      <input type="text" id="editPronouns" placeholder="Pronouns (optional)">
+      <button type="submit">Update Pronouns</button>
+    </form>
+
+    <!-- <header> -->
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 10px;">
+      
+      <!-- Useful Info Card -->
+      <div style="flex: 1 1 350px; border: 1px solid #ccc; border-radius: 10px; padding: 15px; 
+                  background: #f9f9f9; max-width: 600px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+                  text-align: center;">
+        <h3>Useful Info</h3>
+        <p><strong>Location:</strong> Wildcat Studio: 16b Merton Rd, Bishopston, Bristol BS7 8TL</p>
+        <p><strong>Time:</strong> 6pm - 9pm</p>
+        <p><strong>Jam Cost:</strong> £5</p>
+        <p><strong>Link to WhatsApp Group:</strong> 
+          <a href="https://chat.whatsapp.com/Jvd6lnlDbfZ00HDoOEOYsh" target="_blank" rel="noopener">
+            Bristol Community Icarian Jams
+          </a>
+        </p>
+      </div>
+
+      <!-- Bank Details Card -->
+      <div style="flex: 1 1 350px; border: 1px solid #ccc; border-radius: 10px; padding: 15px; 
+                  background: #f9f9f9; max-width: 600px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+                  text-align: center;">
+        <h3 style="margin-top: 0;">Bank Details for Payment</h3>
+        <p><strong>Account Name:</strong> Ms Lucia de Paiva-kynch</p>
+        <p><strong>Account Number:</strong> 90286346</p>
+        <p><strong>Sort Code:</strong> 20-13-67</p>
+        <p>Please make payments no later than the day after the jam.</p>
+      </div>
+    </div>
+    </header>
+
+    <div id="toast-container"></div>
+
+    <button id="archiveBtn" class="admin">Archive & Start New Week</button>
+
+    <?!= include("script"); ?>
+  </body>
+</html>
